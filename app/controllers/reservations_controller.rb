@@ -12,6 +12,10 @@ class ReservationsController < ApplicationController
     @reservation = Reservations.find params[:id]
   end
 
+  def new
+    @reservation = Reservation.new
+  end
+
   def create
     @reservation = Reservation.create reservation_params
     render :json => @reservation
