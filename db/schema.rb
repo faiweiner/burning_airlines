@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20140731060250) do
   end
 
   create_table "users", force: true do |t|
-    t.boolean  "admin"
+    t.boolean  "admin",           default: false
     t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
