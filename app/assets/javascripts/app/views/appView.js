@@ -2,10 +2,6 @@ var app = app || {};
 
 app.AppView = Backbone.View.extend({
   el: '#main',
-  tagName: 'h2',
-  events: {
-    'click': 'h2'
-  },
   initialize: function () {
     console.log('AppView Initialized');
   },
@@ -15,5 +11,5 @@ app.AppView = Backbone.View.extend({
       var view = new app.PlaneListView({model: p});
       $('#planes').append( view.render() );
     });
-  }
+  },
 });
