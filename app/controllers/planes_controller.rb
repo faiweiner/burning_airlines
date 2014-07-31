@@ -20,11 +20,19 @@ class PlanesController < ApplicationController
 		@plane.name = params[:name]
 		@plane.aisles = params[:aisles]
 		@plane.rows = params[:rows]
-		@plane
+		@plane.save
 	end
 
 	def destroy
 		@plane = Plane.find params[:id]
 		@plane.destroy
+	end
+
+	def search
+		if params[:name].present?
+			@plane = Plane.where(:name => params[:name])
+		else
+			flash[:notice] = "Please enter plane name"
+		end
 	end
 end
