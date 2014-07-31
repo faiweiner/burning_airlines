@@ -13,9 +13,16 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find params[:id]
+    @user.update user_params
+    render :json => @user
+    @user.save
   end
 
   def destroy
+    @user = User.find params[:id]
+    @user.destroy
+    root_to user_path # Change incase of edit
   end
 
   private
