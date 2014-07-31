@@ -20,7 +20,7 @@ class PlanesController < ApplicationController
 		@plane.name = params[:name]
 		@plane.aisles = params[:aisles]
 		@plane.rows = params[:rows]
-		@plane
+		@plane.save
 	end
 
 	def destroy
