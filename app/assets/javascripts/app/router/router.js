@@ -2,7 +2,7 @@ var app = app || {};
 
 app.Router = Backbone.Router.extend({
   routes: {
-    '': 'index',
+    '': 'planes',
     'planes/:id': 'getPlane'
   },
   initialize: function () {
@@ -14,13 +14,13 @@ app.Router = Backbone.Router.extend({
   },
   index: function () {
     console.log('you reached index');
-    var appView = new app.AppView({collection: app.posts});
+    var appView = new app.AppView({collection: app.planes});
     appView.render();
   },
   getPost: function (id) {
-    var appView = new app.AppView({collection: app.posts});
+    var appView = new app.AppView({collection: app.planes});
     appView.render();
-    var post = app.posts.get(id);
-    new app.PostView({model: post});
+    var plane = app.planes.get(id);
+    new app.PostView({model: plane});
   }
 });
