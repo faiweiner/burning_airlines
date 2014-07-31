@@ -20,6 +20,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user = User.find params[:id]
+    @user.destroy
+    root_to user_path # Change incase of edit
   end
 
   private
