@@ -12,22 +12,18 @@ app.AppView = Backbone.View.extend({
   },
 
   initialize: function () {
+    var planeView = new app.planeView();
+    var planeListView = new app.planeListView();
     console.log('initialize.appView');
   },
 
   render: function () {
     console.log('render.appView');
     this.$el.html( app.templates.navigation );
-  },
-
-  planeView: function () {
-    var planeView = new
-  },
-
-  planeListView: function () {
-    var planeListView = new app.planeListView();
-    planeListView.render();
+    return this;
   }
+
+
 
   // createUser: function () {
   //   var userView = new app.UserView();
