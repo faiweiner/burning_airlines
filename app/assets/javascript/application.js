@@ -14,5 +14,4 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
-//= require app/models/plane
 //= require_tree .

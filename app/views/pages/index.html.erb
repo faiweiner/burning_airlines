@@ -1,57 +1,63 @@
-<h1>Burning Airlines</h1>
-  <nav id="nav"></nav>
-	<div id="main">
-	</div>
+<!-- This yield page contains all templates -->
 
-  <script id="nav-template" type="text/handlebars-template">
-    <ul>
-      <li id="nav-home"><a href="#"></a></li>
-      <li id="nav-planes"></li>
-      <li id="nav-flights"></li>
-      <li id="nav-reservations"></li>
-    </ul>
-  </script>
+<script id="navigation-template" type="text/handlebars-template">
+  <ul>
+    <li id="nav-home"><a href="#">Home</a></li>
+    <li id="nav-planes"><a href="#">Planes</a></li>
+    <li id="nav-flights"><a href="#">Flights</a></li>
+    <li id="nav-reservations"><a href="#">Reservations</a></li>
+    <li id="nav-users"><a href="#">Sign In</a></li>
+  </ul>
+</script>
 
-  <script id="plane-app-template" type="text/handlebars-template">
-  
-    <section>
-      <h2>All Planes</h2>
-      <ul id="planes"></ul>
-      <form>
-        <input type="plane_name">
-        <input type="plane_rows">
-        <input type="plane_aisles">
-      </form>
-    </section>
+<!-- Script for NAVIGATION templates -->
+<script id="nav-template" type="text/handlebars-template">
+  <ul>
+    <li id="nav-home"><a href="#">Home</a></li>
+    <li id="nav-planes"><a href="#">Planes</a></li>
+    <li id="nav-flights"><a href="#">Flights</a></li>
+    <li id="nav-reservations"><a href="#">Reservations</a></li>
+    <li id="nav-users"><a href="#">Sign In</a></li>
+  </ul>
+</script>
 
-    <section>
-      <h2>All Flights</h2>
-      <ul id="flights"></ul>
-    </section>
-  </script>
+<!-- ############################## -->
+<!-- Script for ALL other templates -->
+<!-- ############################## -->
 
-  <script id="plane-list-template" type="text/handlebars-template">
-    <span>{{ name }}</span>
-    <form>
-      <input type="plane_name">
-      <input type="plane_rows">
-      <input type="plane_aisles">
-    </form>
-  </script>
+<!-- Planes -->
+<script id="plane-template" type="text/handlebars-template">
+  <h1>{{ name }}</h1>
+  <div id="seating-plan"></div>
+  <div>{{ aisles }}, {{ rows }}</div>
+</script>
 
-	<script id="plane-template" type="text/handlebars-template">
-		<h1>{{ name }}</h1>
-		<div id="seating-plan"></div>
-		<div>{{ aisles }}, {{ rows }}</div>
-	</script>
+<script id="plane-list-template" type="text/handlebars-template">
+  <section>
+    <h2>All Planes</h2>
+    <ul id="planes"></ul>
+  </section>
+</script> 
 
-  <script id="flight-list-template" type="text/handlebars-template">
-    <span>{{ name }}</span>
-  </script>
+<script id='create-plane-template' type='text/template'>
+  <h2>Create Plane</h2>
+  <form id='create-plane-form' action='#'>
 
-  <script id="flight-template" type="text/handlebars-template">
-    <h1>{{ name }}</h1>
-    <span>{{ origin }}</span>
-    <span>{{ destination }}</span>
-  </script>
+    <label for='name'>Name: </label>
+    <input type='text' id='name' autofocus='true'>
+
+    <button>Create</button>
+  </form>
+</script>
+
+<!-- Flights -->
+<script id="flight-list-template" type="text/handlebars-template">
+  <span>{{ name }}</span>
+</script>
+
+<script id="flight-template" type="text/handlebars-template">
+  <h1>{{ name }}</h1>
+  <span>{{ origin }}</span>
+  <span>{{ destination }}</span>
+</script>
 

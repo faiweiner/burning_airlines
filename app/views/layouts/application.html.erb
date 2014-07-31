@@ -7,14 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<nav>
-  <ul>
-    <li><a href="/"> Home</a></li>
-  </ul>
-</nav>
-
-<%= yield %>
-
+	<div class="wrapper">
+		<nav id="nav">
+		  <ul>
+		    <li><a href="/">Rails Home</a></li>
+		  </ul>
+		</nav>
+		<div id="main"></div>
+		<div id="planes"></div>
+		<%= yield %>
+	</div>
 </body>
 </html>
