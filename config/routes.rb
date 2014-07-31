@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :planes
   resources :flights
+
 end
 
 # Prefix Verb   URI Pattern                 Controller#Action
