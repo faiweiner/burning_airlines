@@ -30,11 +30,11 @@ app.AppView = Backbone.View.extend({
 	},
 
 	planesSubview: function () {
+		app.router.navigate("planes/", true);
 		this.$el.append( app.templates.planeListTemplate );
 		this.$el.append( app.templates.planeTemplate );
 		debugger;
 		this.closest('#dump').html( app.templates.planeTemplate );
-		app.navigate("planes/", true);
 	},
 
 	flightsSubview: function () {
