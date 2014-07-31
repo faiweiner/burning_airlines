@@ -1,9 +1,11 @@
 var app = app || {};
 
-app.Post = Backbone.Model.extend({
+app.Plane = Backbone.Model.extend({
   urlRoot: '/planes',
   defaults: {
-    title: 'New Post about Backbone',
-    content: 'New Post about Backbone, content goes here'
+    name: '747',
+    aisle: 'A',
+    row: 10,
+    seat_count: 0 ,
   }
 });

@@ -3,12 +3,12 @@ var app = app || {};
 app.Router = Backbone.Router.extend({
   routes: {
     '': 'index',
-    'posts/:id': 'getPost'
+    'planes/:id': 'getPlane'
   },
   initialize: function () {
     console.log("router initialized");
-    app.posts = new app.Posts();
-    app.posts.fetch().done(function (){
+    app.planes = new app.Planes();
+    app.planes.fetch().done(function (){
       Backbone.history.start();
     });
   },
