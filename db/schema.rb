@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731035849) do
+ActiveRecord::Schema.define(version: 20140731044508) do
 
   create_table "flights", force: true do |t|
     t.integer  "plane_id"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20140731035849) do
   end
 
   create_table "users", force: true do |t|
-    t.boolean  "admin"
+    t.boolean  "admin",                 default: false
     t.text     "name"
     t.text     "password"
     t.text     "password_confirmation"
