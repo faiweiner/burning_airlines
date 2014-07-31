@@ -1,6 +1,7 @@
 class PlanesController < ApplicationController
 	def index
 		@planes = Plane.all
+		render :json => @planes
 	end
 
 	def new
