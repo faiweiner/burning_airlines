@@ -9,7 +9,7 @@ class ReservationsController < ApplicationController
   end
 
   def show
-    @reservation = Reservations.find params[:id]
+    @reservation = Reservation.find params[:id]
   end
 
   def new
@@ -18,6 +18,7 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.create reservation_params
+    @reservation.save
     render :json => @reservation
   end
 
@@ -36,7 +37,7 @@ class ReservationsController < ApplicationController
 
   private
   def reservation_params
-    params.require(:id => params[:id], :user_id => params[:user_id], :date => params[:date], :flight_id => params[:flight_id])
+    params.require(:user_id => params[:user_id], :date => params[:date], :flight_id => params[:flight_id])
   end
 
 end
