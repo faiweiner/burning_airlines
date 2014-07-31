@@ -3,7 +3,7 @@
 # Table name: users
 #
 #  id                    :integer          not null, primary key
-#  admin                 :boolean
+#  admin                 :boolean          default(FALSE)
 #  name                  :text
 #  password              :text
 #  password_confirmation :text
