@@ -2,12 +2,12 @@
 #
 # Table name: users
 #
-#  id                    :integer          not null, primary key
-#  admin                 :boolean          default(FALSE)
-#  name                  :text
-#  password_confirmation :text
-#  created_at            :datetime
-#  updated_at            :datetime
+#  id              :integer          not null, primary key
+#  admin           :boolean
+#  name            :text
+#  created_at      :datetime
+#  updated_at      :datetime
+#  password_digest :string(255)
 #
 
 class User < ActiveRecord::Base
