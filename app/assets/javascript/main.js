@@ -6,7 +6,8 @@ $(document).ready(function () {
     // flightView: $('#flight-template').html(),
     // reservationsView: $('#reservation-template').html(),
     planeTemplate: $('#plane-template').html(),
-    planeListTemplate: $('#plane-list-template').html()
+    planeListTemplate: $('#plane-list-template').html(),
+    createPlane: $('#create-plane-template').html()
   }
 
   app.router = new app.Router();

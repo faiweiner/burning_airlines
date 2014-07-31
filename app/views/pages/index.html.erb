@@ -18,16 +18,33 @@
 <!-- ############################## -->
 
 <!-- Planes -->
+
+<script id="plane-portal-template" type="text/handlebars-template">
+  <h2>Create Plane</h2>
+  // <form id='create-plane-form' action='#'>
+
+  //   <label for='name'>Name: </label>
+  //   <input type='text' id='name' autofocus='true'>
+
+  //   <button>Create</button>
+  // </form>
+</script>
+
 <script id="plane-template" type="text/handlebars-template">
-  <h1>{{ name }}</h1>
+  <h2>Plane Name</h2>
+  <h3>{{ name }}</h3>
   <div id="seating-plan"></div>
   <div>{{ aisles }}, {{ rows }}</div>
 </script>
 
-<script id="plane-list-template" type="text/handlebars-template">
+<script id="planes-template" type="text/handlebars-template">
   <h2>All Planes</h2>
   <ul id="planes"></ul>
 </script> 
+
+<script id="plane-list-template" type="text/handlebars-template">
+  <span>{{ name }}</span>
+</script>
 
 <script id='create-plane-template' type='text/template'>
   <h2>Create Plane</h2>

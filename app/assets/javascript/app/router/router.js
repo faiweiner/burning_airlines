@@ -14,9 +14,10 @@ app.Router = Backbone.Router.extend({
   },
 
   planes: function () {
-  	var planeListView = new app.PlaneListView();
-  	planeListView.render();
+    var planeListView = new app.PlaneListView({collection: app.planes});
   	console.log("planes route");
+    debugger;
+    planeListView.render();
   },
 
   searchPlane: function () {

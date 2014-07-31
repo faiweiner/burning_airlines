@@ -6,7 +6,7 @@ app.AppView = Backbone.View.extend({
 
 	events: {
 		'click #nav-home': 						'index',
-		'click #nav-planes': 					'planesSubview',
+		'click #nav-planes': 					'planesPortal',
 		'click #nav-flights': 				'flightsSubview',
 		'click #nav-reservations':		'reservationsSubview',
 		'click #nav-users': 					'usersSubview',
@@ -22,19 +22,19 @@ app.AppView = Backbone.View.extend({
 		console.log('render.appView');
 		this.$el.css('background-color', 'orange');
 		this.$el.html( app.templates.navigation );
-		// this.$el.append('<div id="dump">Baller</div>');
 	},
 
 	index: function () {
 
 	},
 
-	planesSubview: function () {
+	planesPortal: function () {
+		this.setElement('#planes');
+		this.$el.append( app.router.planes );
+		// this.$el.append( app.templates.planeTemplate );
+		// this.$el.append( app.planeView );	
+		// this.$el.append( app.templates.createPlane );
 		app.router.navigate("planes/", true);
-		this.$el.append( app.templates.planeListTemplate );
-		this.$el.append( app.templates.planeTemplate );
-		debugger;
-		this.closest('#dump').html( app.templates.planeTemplate );
 	},
 
 	flightsSubview: function () {

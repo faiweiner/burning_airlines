@@ -6,12 +6,16 @@ app.PlaneListView = Backbone.View.extend({
     'click': 'view'
   },
   initialize: function() {
-    var list_html = Handlebars.compile(app.templates.planeListTemplate);
-    // var copy = list_html( this.model.toJSON() );
     console.log("look up all planes");
   },
 
   render: function () {
+    // var planes = new app.Planes();
+    // planes.fetch();
+    var list_html = Handlebars.compile(app.templates.planeListTemplate);
+    // debugger;
+    var copy = list_html( this.collection.toJSON() );
+    // this.$el.html( copy );
     console.log("am i rendering?");
   },
 

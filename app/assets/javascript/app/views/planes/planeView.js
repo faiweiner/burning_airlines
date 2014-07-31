@@ -4,16 +4,17 @@ app.PlaneView = Backbone.View.extend({
 	el: '#planes',
 
 	events: {
-		'click button': 'createAirplane'
+		'click button': 'createPlane'
 	},
 
 	initialize: function () {
 		this.render();
+		console.log('from plane view');
 	},
 
 	render: function () {
-		var planeView = Handlebars.compile(app.templates.planeView);
-		var copy = planeView( this.model.toJSON() );
+		var planeTemplate = Handlebars.compile(app.templates.planeTemplate);
+		var copy = planeTemplate( this.model.toJSON() );
 
 		var aisle_letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		for(var r = 0; r <= this.model.get('rows'); r++) {
@@ -28,8 +29,8 @@ app.PlaneView = Backbone.View.extend({
 	},
 
 	createPlane: function () {
-	  // var newPlane = new app.Plane( {name: $('#name').val(), row: $('#row').val(), column: $('#column').val()} );
-	  // newPlane.save();
+	  var newPlane = new app.Plane( {name: $('#name').val(), row: $('#row').val(), column: $('#column').val()} );
+	  newPlane.save();
 	  console.log('new plane ready to get saved');
 	}
 
