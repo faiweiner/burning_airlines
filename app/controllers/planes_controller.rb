@@ -1,7 +1,10 @@
 class PlanesController < ApplicationController
 	def index
 		@planes = Plane.all
-		render :json => @planes
+		respond_to do |format|
+      format.html {}
+      format.json{ render :json => @planes }
+    end
 	end
 
 	def new
@@ -10,6 +13,7 @@ class PlanesController < ApplicationController
 
 	def create
 		@plane = Plane.create(:name => params[:name], :aisles => params[:aisles], :rows => params[:rows])
+		@plane.save
 		respond_to do |format|
   		format.html {}
   		format.json { render :json => @plane }

@@ -1,6 +1,10 @@
 class FlightsController < ApplicationController
 	def index
 		@flights = Flight.all
+		respond_to do |format|
+			format.html {}
+			format.json{ render :json => @flights }
+		end
 	end
 
 	def new
@@ -9,10 +13,11 @@ class FlightsController < ApplicationController
 
 	def create
 		@flight = Flight.create(:name => params[:name], :origin => params[:origin], :destination => params[:destination])
+		@flight.save
 		respond_to do |format|
-  		format.html {}
-  		format.json { render :json => @flight }
-  	end
+			format.html {}
+			format.json { render :json => @flight }
+		end
 	end
 
 	def update
