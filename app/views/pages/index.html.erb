@@ -11,11 +11,6 @@
       <li id="nav-reservations"></li>
     </ul>
   </script>
-<form>
-  <input type="plane_name">
-  <input type="plane_rows">
-  <input type="plane_aisles">
-</form>
 
   <script id="plane-app-template" type="text/handlebars-template">
     <h2>All Planes</h2>
@@ -25,6 +20,11 @@
 
   <script id="plane-list-template" type="text/handlebars-template">
     <span>{{ name }}</span>
+    <form>
+      <input type="plane_name">
+      <input type="plane_rows">
+      <input type="plane_aisles">
+    </form>
   </script>
 
 	<script id="plane-template" type="text/handlebars-template">
@@ -32,11 +32,3 @@
 		<div id="seating-plan"></div>
 		<div>{{ aisles }}, {{ rows }}</div>
 	</script>
-
-  <script id="plane-add-template" type="text/handlebars-template">
-
-  </script>
-
-
-
-
