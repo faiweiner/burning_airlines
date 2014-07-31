@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.PostListView = Backbone.View.extend({
+app.PlaneListView = Backbone.View.extend({
   tagName: 'li',
   events: {
     'click': 'view'
@@ -10,13 +10,13 @@ app.PostListView = Backbone.View.extend({
   },
   render: function () {
     // THIS MAKES NO FRIGGIN SENSE!!!!!! WTF
-    var list_html = Handlebars.compile(app.templates.postListView)
+    var list_html = Handlebars.compile(app.templates.planeListView)
     var copy = list_html( this.model.toJSON() );
 
     this.$el.html( copy );
     return this.el;
   },
   view: function () {
-    app.router.navigate('posts/' + this.model.get('id'), true);
+    app.router.navigate('planes/' + this.model.get('id'), true);
   }
 });
