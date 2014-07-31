@@ -2,6 +2,10 @@ var app = app || {};
 
 app.AppView = Backbone.View.extend({
   el: '#main',
+  tagName: 'h2',
+  events: {
+    'click': 'h2'
+  },
   initialize: function () {
     console.log('AppView Initialized');
   },

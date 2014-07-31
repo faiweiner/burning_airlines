@@ -2,8 +2,8 @@ var app = app || {};
 
 $(document).ready(function(){
   app.templates = {
-    appView: $('#app-template').html(),
-    planeListView: $('#list-template').html(),
+    appView: $('#plane-app-template').html(),
+    planeListView: $('#plane-list-template').html(),
     planeView: $('#plane-template').html(),
   };
 
