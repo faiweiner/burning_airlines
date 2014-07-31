@@ -9,6 +9,10 @@ app.Router = Backbone.Router.extend({
   initialize: function () {
     console.log("router initialized");
     app.planes = new app.Planes();
+    console.log("got planes");
+    app.flights = new app.Flights();
+    console.log("got flights");
+    // app.flights.fetch();
     app.planes.fetch().done(function (){
     Backbone.history.start();
     });

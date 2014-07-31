@@ -5,7 +5,6 @@
 #  id                    :integer          not null, primary key
 #  admin                 :boolean          default(FALSE)
 #  name                  :text
-#  password              :text
 #  password_confirmation :text
 #  created_at            :datetime
 #  updated_at            :datetime
