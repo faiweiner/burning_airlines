@@ -3,16 +3,20 @@
 	<div id="main">
 	</div>
 
-	<script id="app-template" type="text/handlebars-template">
-		<h1>All Planes</h1>
-		<ul id="planes"></ul>
-		// <h1>All Flights</h1>
-		// <ul id="flights"></ul>
-	</script>
+  <script id="nav-template" type="text/handlebars-template">
+    <ul>
+      <li id="home"></li>
+      <li id="planes"></li>
+      <li id="flights"></li>
+      <li id="reservations"></li>
+    </ul>
+  </script>
 
-<!-- 	<script id="flight-list-template" type="text/handlebars-template">
-		<h1>{{ name }}</h1>
-	</script> -->
+
+  <script id="plane-app-template" type="text/handlebars-template">
+    <h2>All Planes</h2>
+    <ul id="planes"></ul>
+  </script>
 
   <script id="plane-list-template" type="text/handlebars-template">
     <span>{{ name }}</span>
