@@ -31,7 +31,7 @@ class ReservationsController < ApplicationController
 
   private
   def reservation_params
-    params.require(:id => params[:id], :user_id => params(:user_id), :date => params(:date), :flight_id => params(:flight_id) )
+    params.require(:id => params[:id], :user_id => params[:user_id], :date => params[:date], :flight_id => params[:flight_id])
   end
 
 end
