@@ -7,7 +7,7 @@ app.PlaneView = Backbone.View.extend({
   },
   render: function () {
     var plane_html = Handlebars.compile(app.templates.planeView);
-    var copy = post_html( this.model.toJSON() );
+    var copy = plane_html( this.model.toJSON() );
 
     this.$el.html( copy );
   }
