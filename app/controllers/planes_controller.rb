@@ -10,15 +10,7 @@ class PlanesController < ApplicationController
   		format.json { render :json => @new_plane }
   	end
 	end
-
-	def update
-
-	end
-
-	def destroy
-
-	end
-
+	
 	def search
 
 	end
