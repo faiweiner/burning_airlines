@@ -21,6 +21,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find params[:id]
     @reservation.update reservation_params
     render :json => @reservation
+    @user.save
   end
 
   def destroy
