@@ -15,11 +15,3 @@ Flight.create(:plane_id => Plane.where(name: '747')[0].id, :name => '747 201', :
 Flight.create(:plane_id => Plane.where(name: 'Richie Rich')[0].id, :name => 'Richie Rich 201', :origin => 'Sydney', :destination => 'Bangkok' )
 Flight.create(:plane_id => Plane.where(name: 'Ros Flies')[0].id, :name => 'Ros Flies 201', :origin => 'Sydney', :destination => 'Honolulu' )
 
-User.create(:admin => true, :name => "rich", :password => "chicken", :password_confirmation => "chicken")
-User.create(:admin => false, :name => "rich2", :password => "chicken", :password_confirmation => "chicken")
-User.create(:admin => true, :name => "ros", :password => "chicken", :password_confirmation => "chicken")
-User.create(:admin => false, :name => "ros2", :password => "chicken", :password_confirmation => "chicken")
-User.create(:admin => true, :name => "tom", :password => "chicken", :password_confirmation => "chicken")
-User.create(:admin => false, :name => "tom2", :password => "chicken", :password_confirmation => "chicken")
-User.create(:admin => true, :name => "fai", :password => "chicken", :password_confirmation => "chicken")
-User.create(:admin => false, :name => "fai2", :password => "chicken", :password_confirmation => "chicken")
