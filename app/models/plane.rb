@@ -13,4 +13,7 @@
 
 class Plane < ActiveRecord::Base
 	has_many :flights
+	def seat_count
+		self.aisles * self.rows
+	end
 end
