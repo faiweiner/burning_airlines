@@ -1,4 +1,4 @@
-Planes.destroy_all
+Plane.destroy_all
 
 Plane.create(:name => '747', :aisles => 10, :rows => 10)
 Plane.create(:name => 'Fai Air', :aisles => 5, :rows => 30)
