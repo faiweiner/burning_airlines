@@ -21,9 +21,9 @@ app.AppView = Backbone.View.extend({
   },
 
   planeView: function () {
-
+    var planeView = new
   },
-  
+
   planeListView: function () {
     var planeListView = new app.planeListView();
     planeListView.render();
