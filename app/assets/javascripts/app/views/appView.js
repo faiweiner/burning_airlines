@@ -8,8 +8,8 @@ app.AppView = Backbone.View.extend({
   render: function () {
     this.$el.html(app.templates.appView);
     this.collection.each(function (p) {
-      var view = new app.PostListView({model: p});
-      $('#posts').append( view.render() );
+      var view = new app.PlaneListView({model: p});
+      $('#planes').append( view.render() );
     });
   }
 });
