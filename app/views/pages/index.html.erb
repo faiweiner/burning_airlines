@@ -5,7 +5,7 @@
 
   <script id="nav-template" type="text/handlebars-template">
     <ul>
-      <li id="nav-home"></li>
+      <li id="nav-home"><a href="#"></a></li>
       <li id="nav-planes"></li>
       <li id="nav-flights"></li>
       <li id="nav-reservations"></li>
@@ -18,9 +18,14 @@
 </form>
 
   <script id="plane-app-template" type="text/handlebars-template">
-    <h2>All Planes</h2>
-
-    <ul id="planes"></ul>
+    <section>
+      <h2>All Planes</h2>
+      <ul id="planes"></ul>
+    </section>
+    <section>
+      <h2>All Flights</h2>
+      <ul id="flights"></ul>
+    </section>
   </script>
 
   <script id="plane-list-template" type="text/handlebars-template">
@@ -33,6 +38,15 @@
 		<div>{{ aisles }}, {{ rows }}</div>
 	</script>
 
+  <script id="flight-list-template" type="text/handlebars-template">
+    <span>{{ name }}</span>
+  </script>
+
+  <script id="flight-template" type="text/handlebars-template">
+    <h1>{{ name }}</h1>
+    <span>{{ origin }}</span>
+    <span>{{ destination }}</span>
+  </script>
 
 
 

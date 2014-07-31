@@ -3,6 +3,7 @@ var app = app || {};
 app.Router = Backbone.Router.extend({
   routes: {
     '': 'planes',
+    // '': 'nav',
     'planes/:id': 'getPlane',
     'flights/:id': 'getFlight'
   },
@@ -17,15 +18,15 @@ app.Router = Backbone.Router.extend({
     Backbone.history.start();
     });
   },
+  // nav: function () {
+  //   console.log('get Nav');
+  //   var navView = new app.NavView();
+  //   navView.render();
+  // },
+
   planes: function () {
     console.log('you reached planes index');
     var appView = new app.AppView({collection: app.planes});
-    appView.render();
-  },
-
-  flights: function () {
-    console.log('you\'ve reached flights index');
-    var appView = new app.Appview({collection: app.flights});
     appView.render();
   },
 
@@ -35,10 +36,20 @@ app.Router = Backbone.Router.extend({
     var plane = app.planes.get(id);
     new app.PlaneView({model: plane});
   },
+
+
+  flights: function () {
+    console.log('you reached flights index');
+    var appView = new app.AppView({collection: app.flights});
+    appView.render();
+  },
+
   getFlight: function (id) {
     var appView = new app.AppView({collection: app.flights});
     appView.render();
-    var flight = app.flights.get(id);
-    new app.FlightView({model: flight});
+    var plane = app.flights.get(id);
+    new app.PlaneView({model: plane});
   }
+
+
 });
