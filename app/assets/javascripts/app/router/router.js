@@ -21,6 +21,6 @@ app.Router = Backbone.Router.extend({
     var appView = new app.AppView({collection: app.planes});
     appView.render();
     var plane = app.planes.get(id);
-    new app.PostView({model: plane});
+    new app.PlaneView({model: plane});
   }
 });
