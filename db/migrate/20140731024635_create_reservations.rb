@@ -1,9 +1,9 @@
 class CreateReservations < ActiveRecord::Migration
   def change
     create_table :reservations do |t|
-      t.user_id :interger
+      t.integer :user_id
       t.date :date
-      t.flight_id :integer
+      t.integer :flight_id
       t.timestamps
     end
   end
