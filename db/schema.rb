@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 20140731024635) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.boolean  "admin"
+  create_table "planes", force: true do |t|
     t.text     "name"
-    t.text     "password"
-    t.text     "password_confirmation"
+    t.integer  "aisles"
+    t.integer  "rows"
+    t.integer  "total_seats"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
