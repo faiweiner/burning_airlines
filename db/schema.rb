@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731023356) do
+ActiveRecord::Schema.define(version: 20140731024635) do
 
   create_table "flights", force: true do |t|
     t.integer  "plane_id"
@@ -27,6 +27,23 @@ ActiveRecord::Schema.define(version: 20140731023356) do
     t.integer  "aisles"
     t.integer  "rows"
     t.integer  "total_seats"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reservations", force: true do |t|
+    t.integer  "user_id"
+    t.date     "date"
+    t.integer  "flight_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.boolean  "admin"
+    t.text     "name"
+    t.text     "password"
+    t.text     "password_confirmation"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
