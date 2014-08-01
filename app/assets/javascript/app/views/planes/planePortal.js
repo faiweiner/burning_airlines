@@ -7,7 +7,7 @@ app.PlanePortal = Backbone.View.extend({
 	},
 
 	initialize: function () {
-		this.render();
+		// this.render();
 		console.log('from plane PORTAL');
 	},
 
@@ -24,13 +24,13 @@ app.PlanePortal = Backbone.View.extend({
     	});
       console.log("planes route");
     });
-		console.log('end of the function');
 	},
 
 	getPlane: function (e) {
 		var inside = $(e.target).html();
 		console.log('clicked a span!');
 		alert (inside);
+		app.router.navigate("planes/" + inside, true);
 	}
 });
 
