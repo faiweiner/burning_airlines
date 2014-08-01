@@ -16,7 +16,7 @@ app.Router = Backbone.Router.extend({
   },
 
   planes: function () {
-        // this.$el.append( app.planeView );  
+        // this.$el.append( app.planeView );
     // this.$el.append( app.templates.createPlane );
     var planeListView = new app.PlaneListView({collection: planes});
   	console.log("planes route");
@@ -26,8 +26,11 @@ app.Router = Backbone.Router.extend({
   	console.log('search plane');
   },
   flights: function () {
-    var flightsView = new app.FlightsView({collection: app.flights});
-    console.log("flights route");
-    flightsView.render();
+    var flights = new app.Flights();
+    flights.fetch().done(function (){
+      var flightsView = new app.FlightsView({collection: flights});
+      console.log("flights route");
+      flightsView.render();
+    });
   }
 });
