@@ -14,7 +14,9 @@ app.PlanePortal = Backbone.View.extend({
 
 	render: function () {
 		this.$el.html('<h1>IM A PLANE PORTAL</h1>');
+		this.$el.append( app.templates.planePortalTemplate );
 		this.$el.append( app.templates.createPlane );
+
 	}
 });
 
