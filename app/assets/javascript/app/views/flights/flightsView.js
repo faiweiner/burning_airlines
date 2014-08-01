@@ -1,25 +1,30 @@
 var app = app || {};
 
 app.FlightsView = Backbone.View.extend({
-  tagName: 'li',
+  el: '#planes',
   events: {
-    'click': 'view'
+    'click li': 'view'
   },
   initialize: function() {
-    console.log("look up all planes");
+    console.log("look up all flights");
+    this.render();
   },
 
   render: function () {
-    var flights = new app.Flights();
-    // planes.fetch();
     var list_html = Handlebars.compile(app.templates.flightsTemplate);
     // debugger;
-    var copy = list_html( this.collection.toJSON() );
-    this.$el.html( copy );
+    var view = this;
+    this.collection.each(function(flights) {
+      var copy = list_html(flights.toJSON() )
+      view.$el.append( copy );
+      return copy;
+    })
+
     console.log("am i rendering?");
   },
 
-  view: function () {
-    app.router.navigate('flights/' + this.model.get('id'), true);
+  view: function (flights) {
+    console.log('you\'ve clicked ');
+    app.router.navigate('flights/' + flights.model.get('id'), true);
   }
 });

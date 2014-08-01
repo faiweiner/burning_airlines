@@ -6,7 +6,7 @@ $(document).ready(function () {
     // flightView: $('#flight-template').html(),
     allReservationsView: $('#reservation-template').html(),
     // -- Plane-related templates -----------------
-    planePortalTemplate: $('plane-portal-template').html(),
+    planePortalTemplate: $('#plane-portal-template').html(),
     planeTemplate: $('#plane-template').html(),
     planeListTemplate: $('#plane-list-template').html(),
     createPlane: $('#create-plane-template').html(),

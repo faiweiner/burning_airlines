@@ -21,14 +21,6 @@
 <!-- ###### Planes ###### -->
 <!-- Portal to all plane-related activities -->
 <script id="plane-portal-template" type="text/handlebars-template">
-  <h2>Create Plane</h2>
-  // <form id='create-plane-form' action='#'>
-
-  //   <label for='name'>Name: </label>
-  //   <input type='text' id='name' autofocus='true'>
-
-  //   <button>Create</button>
-  // </form>
 </script>
 
 <!-- Individual plane view -->
@@ -101,7 +93,9 @@
 
 <!-- ###### Flights ###### -->
 <script id="flights-template" type="text/handlebars-template">
-  <span>{{ name }}</span>
+  <ul>
+    <li>{{ name }}</li>
+  </ul>
 </script>
 
 <script id="create-flight-template" type="text/handlebars-template">
@@ -116,7 +110,7 @@
         <label for='destination'>Destination: </label>
         <input type='text' id='destination'>
 
-        <label for='date'>Date: </label>
+        <label for='date'> Date: </label>
         <input type='date' id='date'>
 
         <button>Create</button>
@@ -135,7 +129,9 @@
 
 
 <script id="reservation-template" type="text/handlebars-template">
+  <h1> Reservations </h1>
   <span>{{ user_id }}</span>
+  <span>{{ flight_id }}</span>
 </script>
 
 
