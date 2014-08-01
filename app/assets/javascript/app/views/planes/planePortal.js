@@ -7,7 +7,7 @@ app.PlanePortal = Backbone.View.extend({
 	},
 
 	initialize: function () {
-		this.render();
+		// this.render();
 		console.log('from plane PORTAL');
 	},
 

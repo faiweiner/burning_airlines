@@ -36,6 +36,7 @@ app.Router = Backbone.Router.extend({
       flightsView.render();
     });
   },
+  
   reservations: function () {
     var reservations = new app.Reservations();
     reservations.fetch().done(function (){
