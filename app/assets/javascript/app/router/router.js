@@ -35,11 +35,11 @@ app.Router = Backbone.Router.extend({
     });
   },
   reservations: function () {
-    // var reservations = new app.Reservations();
-    // reservations.fetch().done(function (){
-      var reservationView = new app.ReservationView();
+    app.reservations = new app.Reservations();
+    app.reservations.fetch().done(function (){
       console.log('reservations route');
+      var reservationView = new app.ReservationView({model: app.reservations});
       reservationView.render();
-    // });
+    });
   }
 });

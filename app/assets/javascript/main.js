@@ -4,7 +4,7 @@ $(document).ready(function () {
   	navigation: $('#navigation-template').html(),
     // userView: $('#user-template').html(),
     // flightView: $('#flight-template').html(),
-    allReservationsView: $('#reservation-template').html(),
+    allReservationsTemplate: $('#reservation-template').html(),
     // -- Plane-related templates -----------------
     planePortalTemplate: $('#plane-portal-template').html(),
     planeTemplate: $('#plane-template').html(),
