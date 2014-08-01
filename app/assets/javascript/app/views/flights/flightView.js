@@ -1,7 +1,7 @@
 var app = app || {};
 
 app.FlightView = Backbone.View.extend({
-  el: '#flights',
+  el: '#planes',
 
   events: {
     'click button': 'createFlight'
