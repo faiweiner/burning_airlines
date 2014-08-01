@@ -23,3 +23,5 @@ User.create(:admin => true, :name => "tom", :password => "chicken", :password_co
 User.create(:admin => false, :name => "tom2", :password => "chicken", :password_confirmation => "chicken")
 User.create(:admin => true, :name => "fai", :password => "chicken", :password_confirmation => "chicken")
 User.create(:admin => false, :name => "fai2", :password => "chicken", :password_confirmation => "chicken")
+
+Reservation.create(:user_id => '1', :flight_id => '1')

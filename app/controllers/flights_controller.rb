@@ -7,6 +7,14 @@ class FlightsController < ApplicationController
 		end
 	end
 
+	def show
+		@flight = Flight.find params[:id]
+		respond_to do |format|
+			format.html {}
+			format.json{ render :json => @flight }
+		end
+	end
+
 	def new
 		@flight = Flight.new
 	end

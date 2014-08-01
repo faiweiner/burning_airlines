@@ -12,7 +12,8 @@ app.ReservationView = Backbone.View.extend({
 
   render: function () {
     var reservationTemplate = Handlebars.compile(app.templates.allReservationsTemplate);
-    var copy = reservationTemplate( this.collection.toJSON() );
+    console.log('got handlebars template');
+    var copy = reservationTemplate( this.model.toJSON() );
     console.log("rendering reservations..");
     this.$el.html( copy );
   },
