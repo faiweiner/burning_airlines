@@ -17,14 +17,14 @@ app.FlightsView = Backbone.View.extend({
     this.collection.each(function(flights) {
       var copy = list_html(flights.toJSON() )
       view.$el.append( copy );
-      return copy;
     })
 
     console.log("am i rendering?");
   },
 
-  view: function (flights) {
-    console.log('you\'ve clicked ');
-    app.router.navigate('flights/' + flights.model.get('id'), true);
+  view: function (e) {
+    // var inside = $(e.target);
+    var inside = (e.target.id);
+    app.router.navigate('flights/' + inside, true);
   }
 });
