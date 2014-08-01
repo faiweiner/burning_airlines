@@ -7,6 +7,7 @@ app.ReservationView = Backbone.View.extend({
   },
   initialize: function () {
     console.log('show all reservations');
+    this.render();
   },
 
   render: function () {
