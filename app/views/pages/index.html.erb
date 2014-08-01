@@ -17,8 +17,9 @@
 <!-- Script for ALL other templates -->
 <!-- ############################## -->
 
-<!-- ###### Planes ###### -->
 
+<!-- ###### Planes ###### -->
+<!-- Portal to all plane-related activities -->
 <script id="plane-portal-template" type="text/handlebars-template">
   <h2>Create Plane</h2>
   // <form id='create-plane-form' action='#'>
@@ -30,6 +31,7 @@
   // </form>
 </script>
 
+<!-- Individual plane view -->
 <script id="plane-template" type="text/handlebars-template">
   <h2>Plane Name</h2>
   <h3>{{ name }}</h3>
@@ -37,15 +39,18 @@
   <div>{{ aisles }}, {{ rows }}</div>
 </script>
 
+<!-- All Planes view -->
 <script id="planes-template" type="text/handlebars-template">
   <h2>All Planes</h2>
   <ul id="planes"></ul>
 </script>
 
+<!-- Bullet of each plane to pipe into All Planes -->
 <script id="plane-list-template" type="text/handlebars-template">
   <span>{{ name }}</span>
 </script>
 
+<!-- Create new plane -->
 <script id='create-plane-template' type='text/template'>
   <h2>Create Plane</h2>
   <form id='create-plane-form' action='#'>
@@ -57,7 +62,44 @@
   </form>
 </script>
 
-<!-- Flights -->
+<!-- Update new plane -->
+<script id='update-plane-template' type='text/template'>
+  <h2>Update Plane</h2>
+  <form id='update-plane-form' action='#'>
+
+    <label for='name'>Name: </label>
+    <input type='text' id='name' autofocus='true'>
+
+    <label for='aisles'>Aisles: </label>
+    <input type='text' id='aisles'>
+
+    <label for='rows'>Rows: </label>
+    <input type='text' id='rows'>
+
+    <button>Update</button>
+  </form>
+</script>
+
+<!-- Destroy plane -->
+<!-- FIXME -->
+<script id='destroy-plane-template' type='text/template'>
+  <h2>Destroy Plane</h2>
+  <form id='destroy-plane-form' action='#'>
+
+    <label for='name'>Name: </label>
+    <input type='text' id='name' autofocus='true'>
+
+    <label for='aisles'>Aisles: </label>
+    <input type='text' id='aisles'>
+
+    <label for='rows'>Rows: </label>
+    <input type='text' id='rows'>
+
+    <button>Confirm</button>
+  </form>
+</script>
+
+<!-- ###### Flights ###### -->
 <script id="flights-template" type="text/handlebars-template">
   <span>{{ name }}</span>
 </script>
