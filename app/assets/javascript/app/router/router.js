@@ -43,13 +43,17 @@ app.Router = Backbone.Router.extend({
 
   flight: function (id) {
       var flight = new app.Flight({id: id});
-      console.log(id);
+      app.planes = new app.Planes();
+      app.planes.fetch().done(function () {
 
-      flight.fetch().done(function () {
-        console.log('the flight', flight);
-        console.log("flight route");
-        var flightView = new app.FlightView({model: flight});
-        flightView.render();
+        console.log(id);
+
+        flight.fetch().done(function () {
+          console.log('the flight', flight);
+          console.log("flight route");
+          var flightView = new app.FlightView({model: flight});
+          flightView.render();
+        });
       });
 
   },
@@ -58,8 +62,8 @@ app.Router = Backbone.Router.extend({
     app.reservations = new app.Reservations();
     app.reservations.fetch().done(function (){
       console.log('reservations route');
-      var reservationView = new app.ReservationView({model: app.reservations});
-      reservationView.render();
+      var reservationsView = new app.ReservationsView({collection: app.reservations});
+      reservationsView.render();
     });
   },
   user: function () {
