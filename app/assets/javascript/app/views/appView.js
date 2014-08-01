@@ -42,8 +42,8 @@ app.AppView = Backbone.View.extend({
 	},
 
 	usersPortal: function () {
-		alert('user section!');
-	},
+		app.router.navigate("users", true);
+	}
 
 
 	// createUser: function () {

@@ -137,3 +137,32 @@
 <script id="reservation-template" type="text/handlebars-template">
   <span>{{ user_id }}</span>
 </script>
+
+
+
+
+
+<!-- Users -->
+
+<script id="user-list-template">
+    <span>{{ name }}</span>
+    <div>
+      <form>
+        <label for='name'>Name: </label>
+        <input type="text" id="u-name">
+
+        <label for='password'>Password: </label>
+        <input type='password' id="u-pword">
+
+        <label for='password-confirmation'>Confirm: </label>
+        <input type='password-confirmation' id="u-pconfirm">
+      </form>
+    </div>
+  </script>
+
+  <script id="user-template">
+    <h1>{{ name }}</h1>
+    <span>{{ admin }}</span>
+  </script>
+
+<!-- End Users -->
