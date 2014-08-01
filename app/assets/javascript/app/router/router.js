@@ -5,7 +5,9 @@ app.Router = Backbone.Router.extend({
     '': 										'index',					// homepage
     'planes': 							'planes',
     'planes(/:id)': 				'planes',
-    'planes/:query': 				'searchPlane'
+    'planes/:query': 				'searchPlane',
+    'flights':              'flights'
+    // 'flights(/:id)':        'flights'
   },
 
   index: function () {
@@ -16,11 +18,14 @@ app.Router = Backbone.Router.extend({
   planes: function () {
     var planeListView = new app.PlaneListView({collection: app.planes});
   	console.log("planes route");
-    debugger;
     planeListView.render();
   },
-
   searchPlane: function () {
   	console.log('search plane');
+  },
+  flights: function () {
+    var flightsView = new app.FlightsView({collection: app.flights});
+    console.log("flights route");
+    flightsView.render();
   }
 });
