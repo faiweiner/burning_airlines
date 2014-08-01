@@ -2,7 +2,6 @@ var app = app || {};
 
 app.PlanePortal = Backbone.View.extend({
 	el: '#planes',
-
 	events: {
 		'click span': 'getPlane'
 	},

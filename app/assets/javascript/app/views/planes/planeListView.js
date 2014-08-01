@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.PlanesListView = Backbone.View.extend({
+app.PlaneListView = Backbone.View.extend({
   tagName: 'li',
   events: {
     'click': 'view'
@@ -13,8 +13,9 @@ app.PlanesListView = Backbone.View.extend({
     // var planes = new app.Planes();
     // planes.fetch();
     var list_html = Handlebars.compile(app.templates.planeListTemplate);
-    var copy = list_html( this.model.toJSON() );
-    this.$el.html( copy );
+    // debugger;
+    var copy = list_html( this.collection.toJSON() );
+    // this.$el.html( copy );
     console.log("am i rendering?");
   },
 
