@@ -2,6 +2,7 @@ var app = app || {};
 
 app.FlightView = Backbone.View.extend({
   el: '#planes',
+  tagName: 'div',
 
   events: {
     'click button': 'createFlight',
@@ -36,8 +37,10 @@ app.FlightView = Backbone.View.extend({
     for(var r = 0; r <= rows; r++) {
       for (var a = 0; a < aisles; a++) {
         var aisle = aisle_letter.charAt(a);
-      console.log(aisle, r);
-      $('#seating-plan').text(aisle);
+        console.log(aisle, r);
+        var seatTemplate = Handlebars.compile(app.templates.seatTemplate);
+        this.$el.append(seatTemplate({r: r}));
+
       }
     }
 

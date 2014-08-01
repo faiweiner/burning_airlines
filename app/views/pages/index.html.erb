@@ -4,6 +4,7 @@
 <!-- Navigation lives in appView, which
      is visible on all pages -->
 <script id="navigation-template" type="text/handlebars-template">
+  <h1> Burning Airlines</h1>
   <ul>
     <li id="nav-home">Home</li>
     <li id="nav-planes">Planes</li>
@@ -129,9 +130,13 @@
   <h1>{{ name }}</h1>
   <span>{{ origin }}</span>
   <span>{{ destination }}</span>
-  <div></div>
+  <div> </div>
 </script>
 
+<script id="seat-template" type="text/handlebars-template">
+  <div class="seats" data-seatnum= "{{ r }}" > </div>
+
+</script>
 <!-- END FLIGHTS -->
 
 <!-- Reservations -->

@@ -20,7 +20,9 @@ $(document).ready(function () {
     // -- Flight-related templates -----------------
     flightsTemplate: $('#flights-template').html(),
     flightTemplate: $('#flight-template').html(),
-    createFlightTemplate: $('#create-flight-template').html()
+    createFlightTemplate: $('#create-flight-template').html(),
+
+    seatTemplate: $('#seat-template').html()
   }
 
   app.router = new app.Router();
