@@ -29,11 +29,6 @@ app.AppView = Backbone.View.extend({
 	},
 
 	planesPortal: function () {
-		this.setElement('#planes');
-		this.$el.append( app.router.planes );
-		// this.$el.append( app.templates.planeTemplate );
-		// this.$el.append( app.planeView );
-		// this.$el.append( app.templates.createPlane );
 		app.router.navigate("planes", true);
 	},
 
