@@ -1,19 +1,20 @@
 var app = app || {};
 
 app.ReservationView = Backbone.View.extend({
-  tagName: '#main',
+  el: '#reservations',
   events:{
     'click': 'setReservation'
   },
   initialize: function () {
-    console.log('show all reservations');
     this.render();
+    console.log('from reservation view');
   },
 
   render: function () {
-    var list_html = Handlebars.compile(app.templates.allReservationsTemplate);
-    var copy = list_html( this.collection.toJSON() );
-    console.log("rendering reservations..")
+    var reservationTemplate = Handlebars.compile(app.templates.allReservationsTemplate);
+    var copy = reservationTemplate( this.collection.toJSON() );
+    console.log("rendering reservations..");
+    this.$el.html( copy );
   },
 
   setReservation: function () {

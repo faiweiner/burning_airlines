@@ -6,8 +6,9 @@ app.Router = Backbone.Router.extend({
     'planes': 							'planes',
     'planes(/:id)': 				'planes',
     'planes/:query': 				'searchPlane',
-    'flights':              'flights'
+    'flights':              'flights',
     // 'flights(/:id)':        'flights'
+    'reservations':         'reservations'
   },
 
   index: function () {
@@ -32,8 +33,11 @@ app.Router = Backbone.Router.extend({
     });
   },
   reservations: function () {
-    console.log('rendering reservations?');
-    var reservationView = new app.ReservationView();
-    reservationView.render();
+    var reservations = new app.Reservations();
+    reservations.fetch().done(function (){
+      var reservationView = new app.ReservationView({collection: reservations});
+      console.log('reservations route');
+      reservationView.render();
+    });
   }
 });
