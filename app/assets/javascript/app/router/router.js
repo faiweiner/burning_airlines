@@ -21,7 +21,7 @@ app.Router = Backbone.Router.extend({
     var planePortalView = new app.PlanePortal();
     planePortalView.render();
   },
-  
+
   searchPlane: function () {
   	console.log('search plane');
   },
@@ -35,11 +35,11 @@ app.Router = Backbone.Router.extend({
     });
   },
   reservations: function () {
-    var reservations = new app.Reservations();
-    reservations.fetch().done(function (){
-      var reservationView = new app.ReservationView({collection: reservations});
+    // var reservations = new app.Reservations();
+    // reservations.fetch().done(function (){
+      var reservationView = new app.ReservationView();
       console.log('reservations route');
       reservationView.render();
-    });
+    // });
   }
 });
