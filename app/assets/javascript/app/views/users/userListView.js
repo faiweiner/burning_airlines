@@ -1,24 +1,22 @@
 var app = app || {};
 
-app.PlanesListView = Backbone.View.extend({
+app.UserListView = Backbone.View.extend({
   tagName: 'li',
   events: {
     'click': 'view'
   },
   initialize: function() {
-    console.log("look up all planes");
-  },
 
+  },
   render: function () {
-    // var planes = new app.Planes();
-    // planes.fetch();
-    var list_html = Handlebars.compile(app.templates.planeListTemplate);
+    // THIS MAKES NO FRIGGIN SENSE!!!!!! WTF
+    var list_html = Handlebars.compile(app.templates.userListView)
     var copy = list_html( this.model.toJSON() );
+
     this.$el.html( copy );
     console.log("am i rendering?");
   },
-
   view: function () {
-
+    app.router.navigate('users/' + this.model.get('id'), true);
   }
 });

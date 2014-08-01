@@ -11,6 +11,11 @@ $(document).ready(function () {
     planeListTemplate: $('#plane-list-template').html(),
     createPlane: $('#create-plane-template').html(),
 
+    // User-related templates -----------------------------
+
+    userListTemplate: $('#user-list-template').html(),
+    userTemplate: $('#user-template').html(),
+
 
     // -- Flight-related templates -----------------
     flightsTemplate: $('#flights-template').html(),

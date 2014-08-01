@@ -8,8 +8,8 @@ app.Router = Backbone.Router.extend({
     'planes/:query': 				'searchPlane',
     'flights':              'flights',
     'flights/:id':          'flight',
-    'reservations':         'reservations'
-
+    'reservations':         'reservations',
+    'users':                'users'
   },
 
   index: function () {
@@ -54,5 +54,10 @@ app.Router = Backbone.Router.extend({
       console.log('reservations route');
       reservationView.render();
     });
+  },
+  user: function () {
+    var usersView = new app.UsersView({collection: users});
+    console.log('users route')
+    usersView.render();
   }
 });
