@@ -20,9 +20,11 @@ app.Router = Backbone.Router.extend({
     var planePortalView = new app.PlanePortal();
     planePortalView.render();
   },
+  
   searchPlane: function () {
   	console.log('search plane');
   },
+
   flights: function () {
     var flights = new app.Flights();
     flights.fetch().done(function (){

@@ -14,9 +14,18 @@ app.PlanePortal = Backbone.View.extend({
 
 	render: function () {
 		this.$el.html('<h1>IM A PLANE PORTAL</h1>');
-		this.$el.append( app.templates.planePortalTemplate );
 		this.$el.append( app.templates.createPlane );
-
+    var planes = new app.Planes();
+    var view = this;
+    planes.fetch().done(function () {
+    	planes.each( function (plane) { 
+      	var planesListView = new app.PlanesListView({model: plane});
+	      planesListView.render();
+		    view.$el.append( planesListView.el );		
+    	});
+      console.log("planes route");
+    });
+		console.log('end of the function');
 	}
 });
 
