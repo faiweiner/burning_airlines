@@ -5,8 +5,8 @@ app.Plane = Backbone.Model.extend({
 	defaults: {
 		name: '747',
 		aisles: 10,
-		rows: 10  
-	}  
+		rows: 10
+	}
 });
 
-console.log('plane model success'); 
+console.log('plane model success');

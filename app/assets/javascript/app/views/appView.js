@@ -7,7 +7,7 @@ app.AppView = Backbone.View.extend({
 	events: {
 		'click #nav-home': 						'index',
 		'click #nav-planes': 					'planesPortal',
-		'click #nav-flights': 				'flightsSubview',
+		'click #nav-flights': 				'flightsPortal',
 		'click #nav-reservations':		'reservationsSubview',
 		'click #nav-users': 					'usersSubview',
 		'click #create-flight': 			'createFlight',
@@ -32,8 +32,9 @@ app.AppView = Backbone.View.extend({
 		app.router.navigate("planes", true);
 	},
 
-	flightsSubview: function () {
-		alert('flight section!');
+	flightsPortal: function () {
+		// alert('flight section!');
+		app.router.navigate("flights", true);
 	},
 
 	reservationsSubview: function () {

@@ -7,7 +7,10 @@ $(document).ready(function () {
     // reservationsView: $('#reservation-template').html(),
     planeTemplate: $('#plane-template').html(),
     planeListTemplate: $('#plane-list-template').html(),
-    createPlane: $('#create-plane-template').html()
+    createPlane: $('#create-plane-template').html(),
+    flightsTemplate: $('#flights-template').html(),
+    flightTemplate: $('#flight-template').html(),
+    createFlightTemplate: $('#create-flight-template').html()
   }
 
   app.router = new app.Router();

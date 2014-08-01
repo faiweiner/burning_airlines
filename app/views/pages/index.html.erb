@@ -43,7 +43,7 @@
 <script id="planes-template" type="text/handlebars-template">
   <h2>All Planes</h2>
   <ul id="planes"></ul>
-</script> 
+</script>
 
 <!-- Bullet of each plane to pipe into All Planes -->
 <script id="plane-list-template" type="text/handlebars-template">
@@ -100,8 +100,27 @@
 </script>
 
 <!-- ###### Flights ###### -->
-<script id="flight-list-template" type="text/handlebars-template">
+<script id="flights-template" type="text/handlebars-template">
   <span>{{ name }}</span>
+</script>
+
+<script id="create-flight-template" type="text/handlebars-template">
+  <form id='create-flight-form' action=''>
+
+        <label for='name'>Name: </label>
+        <input type='text' id='name'>
+
+        <label for='origin'>Origin: </label>
+        <input type='text' id='origin'>
+
+        <label for='destination'>Destination: </label>
+        <input type='text' id='destination'>
+
+        <label for='date'>Date: </label>
+        <input type='date' id='date'>
+
+        <button>Create</button>
+      </form>
 </script>
 
 <script id="flight-template" type="text/handlebars-template">
