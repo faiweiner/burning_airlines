@@ -9,6 +9,7 @@
 #  destination :text
 #  created_at  :datetime
 #  updated_at  :datetime
+#  date        :date
 #
 
 class Flight < ActiveRecord::Base
