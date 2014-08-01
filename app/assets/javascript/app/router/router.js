@@ -46,7 +46,7 @@ app.Router = Backbone.Router.extend({
       console.log(id);
 
       flight.fetch().done(function () {
-        console.log(flight);
+        console.log('the flight', flight);
         console.log("flight route");
         var flightView = new app.FlightView({model: flight});
         flightView.render();
