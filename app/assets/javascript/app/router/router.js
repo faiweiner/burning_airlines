@@ -24,8 +24,11 @@ app.Router = Backbone.Router.extend({
   	console.log('search plane');
   },
   flights: function () {
-    var flightsView = new app.FlightsView({collection: app.flights});
-    console.log("flights route");
-    flightsView.render();
+    var flights = new app.Flights();
+    flights.fetch().done(function (){
+      var flightsView = new app.FlightsView({collection: flights});
+      console.log("flights route");
+      flightsView.render();
+    });
   }
 });
