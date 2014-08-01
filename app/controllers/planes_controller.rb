@@ -7,6 +7,14 @@ class PlanesController < ApplicationController
     end
 	end
 
+	def show
+		@plane = Plane.find params[:id]
+		respond_to do |format|
+			format.html {}
+			format.json{ render :json => @plane}
+		end
+	end
+
 	def new
 		@plane = Plane.new
 	end

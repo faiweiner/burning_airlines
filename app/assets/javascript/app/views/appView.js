@@ -20,7 +20,6 @@ app.AppView = Backbone.View.extend({
 
 	render: function () {
 		console.log('render.appView');
-		this.$el.css('background-color', 'orange');
 		this.$el.html( app.templates.navigation );
 	},
 
