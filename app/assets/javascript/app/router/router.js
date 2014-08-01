@@ -23,6 +23,11 @@ app.Router = Backbone.Router.extend({
     planePortalView.render();
   },
 
+  plane: function () {
+    var plane = new app.Plane({id: id});
+    debugger;
+  },
+
   searchPlane: function () {
   	console.log('search plane');
   },
