@@ -19,6 +19,6 @@ app.PlanesListView = Backbone.View.extend({
   },
 
   view: function () {
-  
+
   }
 });

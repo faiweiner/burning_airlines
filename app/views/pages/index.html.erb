@@ -21,6 +21,14 @@
 <!-- ###### Planes ###### -->
 <!-- Portal to all plane-related activities -->
 <script id="plane-portal-template" type="text/handlebars-template">
+  <h2>Create Plane</h2>
+  // <form id='create-plane-form' action='#'>
+
+  //   <label for='name'>Name: </label>
+  //   <input type='text' id='name' autofocus='true'>
+
+  //   <button>Create</button>
+  // </form>
 </script>
 
 <!-- Individual plane view -->
@@ -93,9 +101,7 @@
 
 <!-- ###### Flights ###### -->
 <script id="flights-template" type="text/handlebars-template">
-  <ul>
-    <li>{{ name }}</li>
-  </ul>
+  <span>{{ name }}</span>
 </script>
 
 <script id="create-flight-template" type="text/handlebars-template">
@@ -110,7 +116,7 @@
         <label for='destination'>Destination: </label>
         <input type='text' id='destination'>
 
-        <label for='date'> Date: </label>
+        <label for='date'>Date: </label>
         <input type='date' id='date'>
 
         <button>Create</button>
@@ -129,9 +135,7 @@
 
 
 <script id="reservation-template" type="text/handlebars-template">
-  <h1> Reservations </h1>
   <span>{{ user_id }}</span>
-  <span>{{ flight_id }}</span>
 </script>
 
 
@@ -140,8 +144,19 @@
 
 <!-- Users -->
 
-<script id="user-list-template">
+<!-- list of users -->
+  <script id="user-list-template">
     <span>{{ name }}</span>
+  </script>
+
+<!-- all users -->
+  <script id="user-template">
+    <h1>{{ name }}</h1>
+    <span>{{ admin }}</span>
+  </script>
+
+<!-- create user -->
+  <script id="create-user-template">
     <div>
       <form>
         <label for='name'>Name: </label>
@@ -152,13 +167,10 @@
 
         <label for='password-confirmation'>Confirm: </label>
         <input type='password-confirmation' id="u-pconfirm">
+
+        <button>Create</button>
       </form>
     </div>
-  </script>
-
-  <script id="user-template">
-    <h1>{{ name }}</h1>
-    <span>{{ admin }}</span>
   </script>
 
 <!-- End Users -->

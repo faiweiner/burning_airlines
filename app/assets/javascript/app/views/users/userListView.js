@@ -14,7 +14,7 @@ app.UserListView = Backbone.View.extend({
     var copy = list_html( this.model.toJSON() );
 
     this.$el.html( copy );
-    return this.el;
+    console.log("am i rendering?");
   },
   view: function () {
     app.router.navigate('users/' + this.model.get('id'), true);
