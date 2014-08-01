@@ -37,8 +37,8 @@ app.AppView = Backbone.View.extend({
 		app.router.navigate("flights", true);
 	},
 
-	reservationsSubview: function () {
-		alert('reservation section!');
+	reservationsPortal: function () {
+		app.router.navigate("reservations", true);
 	},
 
 	usersSubview: function () {
