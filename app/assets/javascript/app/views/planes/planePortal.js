@@ -24,13 +24,15 @@ app.PlanePortal = Backbone.View.extend({
     	});
       console.log("planes route");
     });
-		console.log('end of the function');
 	},
 
 	getPlane: function (e) {
 		var inside = $(e.target).html();
 		console.log('clicked a span!');
 		alert (inside);
+		var plane = new app.Plane({name: inside});
+		debugger;
+		app.router.navigate("planes/" + inside, true);
 	}
 });
 
