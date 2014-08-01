@@ -102,7 +102,9 @@
 
 <!-- ###### Flights ###### -->
 <script id="flights-template" type="text/handlebars-template">
-  <span>{{ name }}</span>
+  <ul>
+    <li>{{ name }}</li>
+  </ul>
 </script>
 
 <script id="create-flight-template" type="text/handlebars-template">
@@ -117,7 +119,7 @@
         <label for='destination'>Destination: </label>
         <input type='text' id='destination'>
 
-        <label for='date'>Date: </label>
+        <label for='date'> Date: </label>
         <input type='date' id='date'>
 
         <button>Create</button>
