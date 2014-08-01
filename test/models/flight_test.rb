@@ -9,6 +9,7 @@
 #  destination :text
 #  created_at  :datetime
 #  updated_at  :datetime
+#  date        :date
 #
 
 require 'test_helper'
