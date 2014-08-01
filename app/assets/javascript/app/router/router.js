@@ -30,5 +30,10 @@ app.Router = Backbone.Router.extend({
       console.log("flights route");
       flightsView.render();
     });
+  },
+  reservations: function () {
+    console.log('rendering reservations?');
+    var reservationView = new app.ReservationView();
+    reservationView.render();
   }
 });
