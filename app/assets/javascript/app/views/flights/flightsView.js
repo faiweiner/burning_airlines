@@ -10,8 +10,6 @@ app.FlightsView = Backbone.View.extend({
   },
 
   render: function () {
-    var flights = new app.Flights();
-    // planes.fetch();
     var list_html = Handlebars.compile(app.templates.flightsTemplate);
     // debugger;
     var copy = list_html( this.collection.toJSON() );
